@@ -1,0 +1,24 @@
+server:
+  port: 8090
+  error:
+    include-binding-errors: always
+    include-message: always
+    include-stacktrace: never
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/contact_db
+    username: techpro
+    password: password
+  jpa:
+    hibernate:
+      ddl-auto: update
+      properties:
+        hibernate:
+          dialect: org.hibernate.dialect.PostgreSQL81Dialect
+          format_sql: false
+          bytecode:
+            use_reflection_optimizer: false
+            provider: true
+    show-sql: false
+
